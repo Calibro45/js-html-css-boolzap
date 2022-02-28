@@ -23,24 +23,16 @@ html {
     margin: 0 auto;
     height: calc(100vh - 20px);
     border: 1px solid red;
-}
-
-.row {
     display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
-
 }
 
-.col-4 {
-    width: calc((100% / 12) * 4);
-    border: 1px solid blue;
-    min-height: 200px;
+#side-bar {
+    width: calc(( 100% /12 ) * 4);
 }
 
-.col-8 {
-    width: calc((100% / 12) * 8);
-    border: 1px solid blue;
-    min-height: 200px;
+#chat {
+    width: calc(( 100% / 12 ) * 8);
 }
+
+
 
