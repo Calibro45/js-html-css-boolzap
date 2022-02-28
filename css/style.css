@@ -156,9 +156,39 @@ input:focus {
 
 #chat .chat-content {
     flex-grow: 1;
-    background-image: url(../img/backchat.jpg);
+    background-image: url(../img/backchat.png);
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+}
+
+#chat .message {
+    color: #d4dfdb;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message .text {
+    margin-bottom: 10px;
+}
+
+.message .time {
+    align-self: flex-end;
+    font-size: 12px;
+}
+
+#chat .sent-message {
+    background-color: #005c4b;
+    align-self: flex-end;
+}
+
+#chat .received-message {
+    background-color: #202c33;
+    align-self: flex-start;
 }
 
 /* toolebar */
