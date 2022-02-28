@@ -148,6 +148,10 @@ input:focus {
     position: relative;
 }
 
+.chat .chat-name {
+    color: #e9edef;
+}
+
 .chat::after {
     content: '';
     height: 1px;
