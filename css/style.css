@@ -77,5 +77,35 @@ ol {
 
 /* searchbar */
 
+#sidebar .search-bar-wrap {
+    padding: 10px 15px;
+    border-bottom: 2px solid #202c33;
+}
+
+.search-bar-wrap .search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    background-color: #202c33;
+}
+
+.search-bar input::placeholder {
+    color: #aebac1;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
 
 
