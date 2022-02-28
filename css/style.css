@@ -9,6 +9,17 @@
 html {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    color: #aebac1;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: 100%;
+}
+
+ol {
+    list-style-type: none;
 }
 
 .container-fluid {
@@ -22,17 +33,49 @@ html {
     max-width: 1400px;
     margin: 0 auto;
     height: calc(100vh - 20px);
-    border: 1px solid red;
     display: flex;
 }
 
-#side-bar {
+#sidebar {
     width: calc(( 100% /12 ) * 4);
+    border-right: 2px solid #262f34;
+
 }
 
 #chat {
     width: calc(( 100% / 12 ) * 8);
 }
+
+/* navbar */
+
+#sidebar .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: #202c33;
+}
+
+.navbar .user-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#sidebar .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.navbar .nav-control {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* searchbar */
 
 
 
