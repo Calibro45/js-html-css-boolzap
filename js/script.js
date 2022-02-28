@@ -4,6 +4,7 @@ const app = new Vue ({
     el: '#app',
 
     data: {
+
         contacts:  [
             {
                 name: 'Andrea',
@@ -30,7 +31,7 @@ const app = new Vue ({
             {
                 name: 'Lorenzo',
                 avatar: 'img/avatar-2.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '28/02/2022 12:30:15',
@@ -52,7 +53,7 @@ const app = new Vue ({
             {
                 name: 'Luca',
                 avatar: 'img/avatar-3.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '28/02/2022 15:51:30',
@@ -66,8 +67,14 @@ const app = new Vue ({
                     },
                 ]
             },
-        ]
-            
+        ],
+
+        currentIndex: 0,       
+    },
+
+    methods: {
+
+
     },
 })
 console.log(app);

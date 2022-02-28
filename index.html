@@ -62,17 +62,18 @@
                 <ol class="chat-wrap">
 
                     <!-- start chat card -->
-                    <li class="chat" v-for="el in contacts">
+                    <li :class="['chat', (index === currentIndex) ? 'active' : '' ]" 
+                    v-for="({name, avatar, visible, messages}, index) in contacts">
                         <div class="chat-avatar">
-                            <img :src="el.avatar" alt="">
+                            <img :src="avatar" alt="">
                         </div>
                         <div class="chat-info">
                             <div>
-                                <h4 class="chat-name">{{ el.name }}</h4>
-                                <p class="chat-message">message</p>
+                                <h4 class="chat-name">{{ name }}</h4>
+                                <p class="chat-message">Ultimo Messagggio</p>
                             </div>
                             <div class="chat-date">
-                                <p>15.30</p>
+                                <p>Data ultimo messaggio</p>
                             </div>
                         </div>
                     </li>
@@ -90,12 +91,14 @@
 
                 <div class="navbar">
 
-                    <div class="user-wrap">
+                    <div class="user-wrap" 
+                    v-for="el in contacts"
+                    v-show="el.visible">
                         <div class="user-avatar">
-                            <img src="img/IMG_1189.JPG" alt="">
+                            <img :src="el.avatar" alt="">
                         </div>
                         <div>
-                            <h2>Nome chat</h2>
+                            <h2>{{ el.name }}</h2>
                         </div>
                     </div>
 
