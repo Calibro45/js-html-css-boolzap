@@ -107,5 +107,29 @@ ol {
     top: 10px;
 }
 
+/* lista chat */
+
+#sidebar .chat-wrap {
+    padding: 10px 15px;
+}
+
+.chat-wrap .chat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat .chat-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat .chat-info {
+    flex-grow: 1;
+}
+
+
 
 
