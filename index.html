@@ -62,13 +62,13 @@
                 <ol class="chat-wrap">
 
                     <!-- start chat card -->
-                    <li class="chat">
+                    <li class="chat" v-for="el in contacts">
                         <div class="chat-avatar">
-                            <img src="img/avatar-1.png" alt="">
+                            <img :src="el.avatar" alt="">
                         </div>
                         <div class="chat-info">
                             <div>
-                                <h4 class="chat-name">Nome Chat</h4>
+                                <h4 class="chat-name">{{ el.name }}</h4>
                                 <p class="chat-message">message</p>
                             </div>
                             <div class="chat-date">

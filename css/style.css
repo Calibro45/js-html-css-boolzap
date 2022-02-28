@@ -120,7 +120,9 @@ input:focus {
 /* lista chat */
 
 #sidebar .chat-wrap {
-    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .chat-wrap .chat {
@@ -128,6 +130,7 @@ input:focus {
     align-items: center;
     gap: 15px;
     position: relative;
+    padding: 10px 15px;
 }
 
 .chat .chat-avatar {
@@ -141,8 +144,22 @@ input:focus {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #262f34;
     padding: 20px 5px;
+    position: relative;
+}
+
+.chat::after {
+    content: '';
+    height: 1px;
+    width: 80%;
+    background-color: #262f34;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+
+.chat.active {
+    background-color: #2a3942;
 }
 
 /* chat section */
