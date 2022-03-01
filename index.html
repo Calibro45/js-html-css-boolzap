@@ -74,7 +74,7 @@
                                 <p class="chat-message">{{ el.messages[el.messages.length - 1].text }}</p>
                             </div>
                             <div class="chat-date">
-                                <p>Data ultimo messaggio</p>
+                                <p>{{ el.messages[el.messages.length - 1].date }}</p>
                             </div>
                         </div>
                     </li>
@@ -138,7 +138,9 @@
                             <i class="fas fa-paperclip"></i>
                         </li>
                         <li class="type-message">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio"
+                            v-model="uMessage"
+                            @keyup.enter="pushNewMessage()">
                         </li>
                         <li>
                             <i class="fas fa-microphone"></i>

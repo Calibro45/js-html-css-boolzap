@@ -70,9 +70,11 @@ const app = new Vue ({
         ],
         activeIndex: 0,
         activeElement: undefined,
+        uMessage: '',
     },
 
     methods: {
+
         setActive: function(element, i) {
 
             this.activeIndex = i;
@@ -89,6 +91,21 @@ const app = new Vue ({
 
                 return 'received-message';
             }
+        },
+
+        createMessage: function() {
+
+            const newMessage = this.uMessage;
+            return {
+                date: '01/03/2022 16:50:30',
+                text: newMessage,
+                status: 'sent',
+            }
+        },
+
+        pushNewMessage: function() {
+
+            this.uMessage = '';
         }
     },
 })

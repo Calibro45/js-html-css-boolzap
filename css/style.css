@@ -184,6 +184,7 @@ input:focus {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     padding: 15px 25px;
 }
 
