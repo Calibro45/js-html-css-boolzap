@@ -118,7 +118,7 @@
 
                 <section class="chat-content">
 
-                    <div :class="['message', (message.status === 'sent') ? 'sent-message' : 'received-message']"
+                    <div :class="['message', setChatClass(message.status)]"
                     v-for="message in contacts[activeIndex].messages">
                         <p class="text">{{ message.text }}</p>
                         <span class="time">{{ message.date }}</span>

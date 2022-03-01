@@ -70,17 +70,26 @@ const app = new Vue ({
         ],
         activeIndex: 0,
         activeElement: undefined,
-        
     },
 
     methods: {
         setActive: function(element, i) {
+
             this.activeIndex = i;
             this.activeElement = element;
         },
 
-     
+        setChatClass: function(status) {
 
+            if (status === 'sent') {
+
+                return 'sent-message';
+
+            } else {
+
+                return 'received-message';
+            }
+        }
     },
 })
 console.log(app);
