@@ -9,7 +9,7 @@ const app = new Vue ({
             {
                 name: 'Gianni',
                 avatar: 'img/avatar-1.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '28/02/2022 17:00:00',
@@ -69,13 +69,16 @@ const app = new Vue ({
             },
         ],
         activeIndex: undefined,
+        activeElement: undefined,
         
     },
 
     methods: {
-        setActive: function(i) {
+        setActive: function(element, i) {
             this.activeIndex = i;
+            this.activeElement = element;
         },
+
      
 
     },

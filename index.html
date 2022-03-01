@@ -64,7 +64,7 @@
                     <!-- start chat card -->
                     <li :class="['chat', (activeIndex === index) ? 'active' : '' ]" 
                     v-for="(el, index) in contacts"
-                    @click="setActive(index)">
+                    @click="setActive(el, index)">
                         <div class="chat-avatar">
                             <img :src="el.avatar" alt="">
                         </div>
@@ -93,8 +93,8 @@
                 <div class="navbar">
 
                     <div class="user-wrap" 
-                    v-for="el in contacts"
-                    v-show="el.visible">
+                    v-for="(el, index) in contacts"
+                    v-show="(index === activeIndex) ? true : false">
                         <div class="user-avatar">
                             <img :src="el.avatar" alt="">
                         </div>
@@ -120,7 +120,7 @@
 
                     <div class="message sent-message"
                     v-for="(el, index) in contacts">
-                        <p class="text">{{ el.messages }}</p>
+                        <p class="text">{{  }}</p>
                         <span class="time">16.40</span>
                     </div>
 
