@@ -69,7 +69,7 @@ const app = new Vue ({
             },
         ],
         activeIndex: 0,
-        activeElement: undefined,
+        activeElement: 0,
         uMessage: '',
     },
 
@@ -105,6 +105,8 @@ const app = new Vue ({
 
         pushNewMessage: function() {
 
+            const messaggio = this.activeElement.messages;
+            messaggio.push(this.createMessage());
             this.uMessage = '';
         }
     },
