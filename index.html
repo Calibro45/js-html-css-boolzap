@@ -118,15 +118,10 @@
 
                 <section class="chat-content">
 
-                    <div class="message sent-message"
-                    v-for="(el, index) in contacts">
-                        <p class="text">{{  }}</p>
-                        <span class="time">16.40</span>
-                    </div>
-
-                    <div class="message received-message">
-                        <p class="text">ciao, come stai</p>
-                        <span class="time">16.40</span>
+                    <div :class="['message', (message.status === 'sent') ? 'sent-message' : 'received-message']"
+                    v-for="message in contacts[activeIndex].messages">
+                        <p class="text">{{ message.text }}</p>
+                        <span class="time">{{ message.date }}</span>
                     </div>
 
                 </section>

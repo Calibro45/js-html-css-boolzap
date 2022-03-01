@@ -68,7 +68,7 @@ const app = new Vue ({
                 ]
             },
         ],
-        activeIndex: undefined,
+        activeIndex: 0,
         activeElement: undefined,
         
     },
