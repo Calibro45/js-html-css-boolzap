@@ -68,11 +68,15 @@ const app = new Vue ({
                 ]
             },
         ],
-
-        currentIndex: 0,
+        activeIndex: undefined,
+        
     },
 
     methods: {
+        setActive: function(i) {
+            this.activeIndex = i;
+        },
+     
 
     },
 })

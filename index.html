@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Bollzap</title>
+    <title>Boolzap</title>
 </head>
 <body class="container-fluid">
 
@@ -62,15 +62,16 @@
                 <ol class="chat-wrap">
 
                     <!-- start chat card -->
-                    <li :class="['chat', (index === currentIndex) ? 'active' : '' ]" 
-                    v-for="({name, avatar, visible, messages}, index) in contacts">
+                    <li :class="['chat', (activeIndex === index) ? 'active' : '' ]" 
+                    v-for="(el, index) in contacts"
+                    @click="setActive(index)">
                         <div class="chat-avatar">
-                            <img :src="avatar" alt="">
+                            <img :src="el.avatar" alt="">
                         </div>
                         <div class="chat-info">
                             <div>
-                                <h4 class="chat-name">{{ name }}</h4>
-                                <p class="chat-message">Ultimo Messagggio</p>
+                                <h4 class="chat-name">{{ el.name }}</h4>
+                                <p class="chat-message">{{ el.messages[el.messages.length - 1].text }}</p>
                             </div>
                             <div class="chat-date">
                                 <p>Data ultimo messaggio</p>
@@ -117,8 +118,9 @@
 
                 <section class="chat-content">
 
-                    <div class="message sent-message">
-                        <p class="text">Testo messaggio</p>
+                    <div class="message sent-message"
+                    v-for="(el, index) in contacts">
+                        <p class="text">{{ el.messages }}</p>
                         <span class="time">16.40</span>
                     </div>
 

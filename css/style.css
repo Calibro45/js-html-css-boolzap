@@ -154,6 +154,7 @@ input:focus {
 
 .chat::after {
     content: '';
+    display: block;
     height: 1px;
     width: 80%;
     background-color: #262f34;
@@ -191,6 +192,7 @@ input:focus {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    max-width: 60%;
 }
 
 .message .text {
