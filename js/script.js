@@ -71,6 +71,8 @@ const app = new Vue ({
         activeIndex: 0,
         activeElement: 0,
         uMessage: '',
+        messaggioAuto: 'ok',
+        clock: 0,
     },
 
     methods: {
@@ -108,7 +110,27 @@ const app = new Vue ({
             const messaggio = this.activeElement.messages;
             messaggio.push(this.createMessage());
             this.uMessage = '';
-        }
+        },
+
+        risposta: function() {
+
+            const risposta = this.messaggioAuto;
+            return {
+                date: '01/03/2022 19:25:40',
+                text: risposta,
+                status: 'received',
+            }
+        },
+
+        pushAnswer: function() {
+
+            const rispChat = this.activeElement.messages;
+            rispChat.push(this.risposta());
+        },
+    },
+
+    mounted() {
+
     },
 })
 console.log(app);

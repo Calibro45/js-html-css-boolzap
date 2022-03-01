@@ -140,7 +140,7 @@
                         <li class="type-message">
                             <input type="text" placeholder="Scrivi un messaggio"
                             v-model="uMessage"
-                            @keyup.enter="pushNewMessage()">
+                            @keyup.enter="pushNewMessage(), pushAnswer()">
                         </li>
                         <li>
                             <i class="fas fa-microphone"></i>
