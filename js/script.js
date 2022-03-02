@@ -95,41 +95,29 @@ const app = new Vue ({
             }
         },
 
-        createMessage: function() {
+        createMessage: function(messaggio, status) {
 
             const data = new Date();
-            const newMessage = this.uMessage;
             return {
                 date: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`,
-                text: newMessage,
-                status: 'sent',
+                text: messaggio,
+                status: status,
             }
         },
 
         pushNewMessage: function() {
 
             const messaggio = this.activeElement.messages;
-            messaggio.push(this.createMessage());
+            messaggio.push(this.createMessage(this.uMessage, 'sent'));
             this.uMessage = '';
             setTimeout( ()=> {
                 this.pushAnswer(messaggio) }, 1000);
         },
 
-        risposta: function() {
-
-            const data = new Date();
-            const risposta = this.messaggioAuto;
-            return {
-                date: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`,
-                text: risposta,
-                status: 'received',
-            }
-        },
-
         pushAnswer: function(contatto) {
 
             const rispChat = contatto;
-            rispChat.push(this.risposta());
+            rispChat.push(this.createMessage(this.messaggioAuto, 'received'));
         },
     }
 })
