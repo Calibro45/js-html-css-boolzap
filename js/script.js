@@ -97,9 +97,10 @@ const app = new Vue ({
 
         createMessage: function() {
 
+            const data = new Date();
             const newMessage = this.uMessage;
             return {
-                date: '01/03/2022 16:50:30',
+                date: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`,
                 text: newMessage,
                 status: 'sent',
             }
@@ -110,27 +111,26 @@ const app = new Vue ({
             const messaggio = this.activeElement.messages;
             messaggio.push(this.createMessage());
             this.uMessage = '';
+            setTimeout( ()=> {
+                this.pushAnswer(messaggio) }, 1000);
         },
 
         risposta: function() {
 
+            const data = new Date();
             const risposta = this.messaggioAuto;
             return {
-                date: '01/03/2022 19:25:40',
+                date: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`,
                 text: risposta,
                 status: 'received',
             }
         },
 
-        pushAnswer: function() {
+        pushAnswer: function(contatto) {
 
-            const rispChat = this.activeElement.messages;
+            const rispChat = contatto;
             rispChat.push(this.risposta());
         },
-    },
-
-    mounted() {
-
-    },
+    }
 })
 console.log(app);
