@@ -71,6 +71,7 @@ input:focus {
     border-right: 2px solid #262f34;
     background-color: #111b21;
     overflow: hidden;
+    user-select: none;
 }
 
 #sidebar:hover {
@@ -255,7 +256,14 @@ input:focus {
     background-color: #202c33;
     align-self: flex-start;
     border-top-left-radius: 0;
+    margin-bottom: 5px;
 }
+
+.sent-message + .received-message,
+.received-message + .sent-message {
+    margin-top: 20px;
+}
+
 .message .text {
     margin-bottom: 10px;
 }
@@ -264,7 +272,6 @@ input:focus {
     align-self: flex-end;
     font-size: 12px;
 }
-
 
 /* toolebar */
 
