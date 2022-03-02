@@ -67,6 +67,151 @@ const app = new Vue ({
                     },
                 ]
             },
+            {
+                name: 'Papà',
+                avatar: 'img/avatar-4.png',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet',
+                        status: 'sent',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet',
+                        status: 'sent',
+                    },
+                ]
+            },
+            {
+                name: 'Mamma',
+                avatar: 'img/avatar-5.jpg',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                ]
+            },
+            {
+                name: 'Nonna',
+                avatar: 'img/avatar-6.png',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                ]
+            },
+            {
+                name: 'Matteo',
+                avatar: 'img/avatar-2.png',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    
+                ]
+            },
+            {
+                name: 'Patrizio',
+                avatar: 'img/avatar-1.png',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    
+                ]
+            },
+            {
+                name: '',
+                avatar: 'img/avatar-2.png',
+                visible: false,
+                messages: [
+                    {
+                        date: '28/02/2022 15:51:30',
+                        text: 'Lorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'sent',
+                    },
+                    {
+                        date: '28/02/2022 15:52:10',
+                        text: 'NLorem ipsum dolor sit amet.',
+                        status: 'received',
+                    },
+                    
+                ]
+            },
         ],
         activeIndex: 0,
         activeElement: 0,
@@ -119,6 +264,11 @@ const app = new Vue ({
             const rispChat = contatto;
             rispChat.push(this.createMessage(this.messaggioAuto, 'received'));
         },
+
+        hour: function (data) {
+
+            return data.split(' ')[1].substring(0, 5);
+        }
 
     },
 

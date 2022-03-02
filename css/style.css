@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #202c33;
+    border-radius: 8px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -57,7 +70,11 @@ input:focus {
     width: calc(( 100% /12 ) * 4);
     border-right: 2px solid #262f34;
     background-color: #111b21;
+    overflow: hidden;
+}
 
+#sidebar:hover {
+    overflow-y: scroll;
 }
 
 #chat {
@@ -189,8 +206,8 @@ input:focus {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 15px 25px;
+    overflow-x: hidden;
 }
 
 #chat .message {

@@ -75,7 +75,7 @@
                                 <p class="chat-message">{{ el.messages[el.messages.length - 1].text }}</p>
                             </div>
                             <div class="chat-date">
-                                <p>{{ el.messages[el.messages.length - 1].date }}</p>
+                                <p>{{ hour(el.messages[el.messages.length - 1].date) }}</p>
                             </div>
                         </div>
                     </li>
@@ -122,7 +122,7 @@
                     <div :class="['message', setChatClass(message.status)]"
                     v-for="message in contacts[activeIndex].messages">
                         <p class="text">{{ message.text }}</p>
-                        <span class="time">{{ message.date }}</span>
+                        <span class="time">{{ hour(message.date) }}</span>
                     </div>
 
                 </section>
