@@ -26,6 +26,7 @@ input[type="text"] {
     border-radius: 7px;
     border: none;
     background-color: #202c33;
+    color: #aeb8bd;
 }
 
 input::placeholder {
@@ -34,7 +35,8 @@ input::placeholder {
 
 input:focus {
     color: #aebac1;
-    outline-color: #262f34;
+    outline: 1px solid currentColor;
+    box-shadow: 0px 2px 5px currentColor;
 }
 
 .container-fluid {
@@ -123,7 +125,6 @@ input:focus {
 #sidebar .chat-wrap {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .chat-wrap .chat {
@@ -132,6 +133,10 @@ input:focus {
     gap: 15px;
     position: relative;
     padding: 10px 15px;
+}
+
+.chat:hover {
+    cursor: pointer;
 }
 
 .chat .chat-avatar {

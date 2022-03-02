@@ -51,7 +51,8 @@
                 <div class="search-bar-wrap">
 
                     <div class="search-bar">
-                        <input type="text" name="chat" placeholder="Cerca e inizia una nuova chat">
+                        <input type="text" name="chat" placeholder="Cerca e inizia una nuova chat"
+                        v-model="ricercaContatto">
                         <i class="fas fa-search"></i>
                     </div>
 
@@ -63,7 +64,7 @@
 
                     <!-- start chat card -->
                     <li :class="['chat', (activeIndex === index) ? 'active' : '' ]" 
-                    v-for="(el, index) in contacts"
+                    v-for="(el, index) in chatFilter"
                     @click="setActive(el, index)">
                         <div class="chat-avatar">
                             <img :src="el.avatar" alt="">

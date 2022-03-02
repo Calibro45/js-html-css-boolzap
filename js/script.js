@@ -72,7 +72,7 @@ const app = new Vue ({
         activeElement: 0,
         uMessage: '',
         messaggioAuto: 'ok',
-        clock: 0,
+        ricercaContatto: '',
     },
 
     methods: {
@@ -119,6 +119,20 @@ const app = new Vue ({
             const rispChat = contatto;
             rispChat.push(this.createMessage(this.messaggioAuto, 'received'));
         },
-    }
+
+    },
+
+    computed: {
+
+        chatFilter: function() {
+            return this.contacts.filter(el => {
+                return el.name.toLowerCase().includes(this.ricercaContatto.toLowerCase());
+            })
+        },
+    },
+
+    created() {
+        this.activeElement = this.contacts[this.activeIndex];
+    },
 })
 console.log(app);
